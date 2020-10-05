@@ -9,7 +9,7 @@ import java.util.*;
  */
 public class PrometheusMetric
 {
-    private static String metricPrefix;
+    private String metricPrefix;
     private String jobId;
     private Map<String, String> labels = new Hashtable<String, String>();
     private Map<String, Object> metrics = new Hashtable<String, Object>();
@@ -17,6 +17,7 @@ public class PrometheusMetric
     
     public PrometheusMetric(String trigger, Map<String, Object> executionData, Map<String, Object> configuration, String metricPrefix)
     {
+        metricPrefix = metricPrefix.toLowerCase();
         // Get unique job identifier
         jobId = FormatLabelValue(getMapValue(executionData, "job", "id"));
         // Get labels & metrics
