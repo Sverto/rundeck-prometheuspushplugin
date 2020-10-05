@@ -1,0 +1,10 @@
+build/tmp/test/jar_extract_1573030152795266878_tmp
+/.vscode
+/.gradle
+/.settings
+/gradle
+/build
+/bin
+gradlew
+gradlew.bat
+.gitlab-ci.yml
